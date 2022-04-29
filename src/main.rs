@@ -8,9 +8,8 @@ fn main() {
         print!("Incorrect number of arguments.\n");
     }
 
-    print!(".intel_syntax noprefix\n");
-    print!(".globl main\n");
-    print!("main:\n");
-    print!("  mov rax, {}\n", &args[1]);
+    print!(".globl _main\n");
+    print!("_main:\n");
+    print!("  mov x0, {}\n", &args[1]);
     print!("  ret\n");
 }
